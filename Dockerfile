@@ -1,4 +1,4 @@
-FROM mtangaro/docker-galaxycloud-rna-workbench:rna_structural_analysis
+FROM mtangaro/docker-galaxycloud-rna-workbench:rna_workbench_tools_3
 
 MAINTAINER ma.tangaro@ibiom.cnr.it
 

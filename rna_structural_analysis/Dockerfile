@@ -6,10 +6,6 @@ ENV container docker
 
 RUN echo "localhost" > /etc/ansible/hosts
 
-ADD install_tools.sh /usr/local/bin/install-tools
-
-RUN chmod +x /usr/local/bin/install-tools 
-
 RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/devel/galaxy-rna-workbench/rna_structural_analysis.yml -O /tmp/tools.yml
 
 RUN /usr/local/bin/install-tools GALAXY_ADMIN_API_KEY /tmp/tools.yml && \

@@ -6,7 +6,7 @@ ENV container docker
 
 RUN echo "localhost" > /etc/ansible/hosts
 
-RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/devel/galaxy-rna-workbench/ngs_preprocessing.yml -O /tmp/tools.yml
+RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-rna-workbench/ngs_preprocessing.yml -O /tmp/tools.yml
 
 RUN /usr/local/bin/install-tools GALAXY_ADMIN_API_KEY /tmp/tools.yml && \
     /export/_conda/bin/conda clean --tarballs --yes > /dev/null
